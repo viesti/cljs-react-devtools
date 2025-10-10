@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.roman01la</groupId>
   <artifactId>cljs-react-devtools</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.1</version>
   <name>cljs-react-devtools</name>
   <licenses>
     <license>
@@ -15,19 +15,19 @@
   <scm>
     <connection>scm:git:git@github.com:roman01la/cljs-react-devtools.git</connection>
     <developerConnection>scm:git:git@github.com:roman01la/cljs-react-devtools.git</developerConnection>
-    <tag>62f169e0112adbdad6c34b6b1b913fd024ed9957</tag>
+    <tag>719beb7a30cc818a104af065b5079fa5ec56f610</tag>
     <url>https://github.com/roman01la/cljs-react-devtools</url>
   </scm>
   <dependencies>
     <dependency>
       <groupId>com.pitch</groupId>
       <artifactId>uix.core</artifactId>
-      <version>1.2.0</version>
+      <version>1.4.5</version>
     </dependency>
     <dependency>
       <groupId>com.pitch</groupId>
       <artifactId>uix.dom</artifactId>
-      <version>1.2.0</version>
+      <version>1.4.5</version>
     </dependency>
   </dependencies>
   <build>
