@@ -1,5 +1,6 @@
 (ns cljs-react-devtools.core
-  (:require [clojure.string :as str]
+  (:require [react-dom :as rdom]
+            [clojure.string :as str]
             [uix.core :as uix :refer [$ defui]]
             [uix.dom]
             [goog.functions :as fns]
@@ -796,6 +797,11 @@
   (and (<= (.-x rect) x (+ (.-x rect) (.-width rect)))
        (<= (.-y rect) y (+ (.-y rect) (.-height rect)))))
 
+(defn find-dom-node [node]
+  (if (exists? rdom/findDOMNode)
+    (rdom/findDOMNode node)
+    (.. node -_reactInternals -child -stateNode)))
+
 (uix/defhook use-dom-inspector [{:keys [root set-inspecting on-target skip-dom? preview-node]}]
   (let [[rect set-rect] (uix/use-state nil)
         nodes (uix/use-memo
@@ -815,7 +821,7 @@
                                   ;; DOM node
                                   (.getBoundingClientRect dom-node)
                                   ;; class component
-                                  (some-> (uix.dom/find-dom-node dom-node) (.getBoundingClientRect)))]
+                                  (some-> (find-dom-node dom-node) (.getBoundingClientRect)))]
                   (set-rect rect)))))
           (let [node! (atom nil)
                 mouse-handler (fn [^js e]
