@@ -1,5 +1,5 @@
-{:deps {com.pitch/uix.core {:mvn/version "1.2.0"}
-        com.pitch/uix.dom {:mvn/version "1.2.0"}}
+{:deps {com.pitch/uix.core {:mvn/version "1.4.5"}
+        com.pitch/uix.dom {:mvn/version "1.4.5"}}
  :paths ["src"]
  :aliases {:examples {:extra-paths ["dev"]
                       :extra-deps {org.clojure/clojure {:mvn/version "1.12.0"}
