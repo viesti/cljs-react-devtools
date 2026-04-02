@@ -559,7 +559,7 @@
                             ($ data-view {:data (vec (.-deps hook)) :style {:margin 0 :overflow-x :auto}})))
 
                       "use-ref"
-                      ($ data-view {:data (.. hook -current -current) :style {:margin 0 :overflow-x :auto}})
+                      ($ data-view {:data (.. hook -current) :style {:margin 0 :overflow-x :auto}})
 
                       ($ data-view {:data hook :style {:margin 0 :overflow-x :auto}}))))))
            hooks)))))
